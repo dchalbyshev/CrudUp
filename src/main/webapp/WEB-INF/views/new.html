@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NewPerson</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/people}" th:object="${person}">
+    <!-- th:action="@{/people} указываем куда отправляем форму -->
+   <!-- th:object="${person}" указываем что форма будет создаваться для
+     объекта под ключом person-->
+  <label for="name">EnterName</label>
+    <!-- подписывает input(какую подпись будет видеть пользователь
+    возле input-->
+<input type="text" th:field="*{name}" id="name">
+    <!--указываем какому полю пинадляжащему объекту опд ключом
+     person мы будем присваивать значение в данном input-->
+    <br/>
+    <input type="submit" value="Create"/>
+    <!-- ну и есс- но  хнопочка по которой запузыриваем форму
+    на /people-->
+
+
+
+
+
+</form>
+</body>
+</html>
